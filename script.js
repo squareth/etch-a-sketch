@@ -8,5 +8,10 @@ function createGrid(amount){
         let square = document.createElement('div');
         square.className = "etch-pixel";
         mainContainer.appendChild(square);
+        square.addEventListener('mouseover', drawSquare);
     }
+}
+
+function drawSquare(e){
+    console.log(e.target);
 }
