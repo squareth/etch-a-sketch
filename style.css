@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px;
+    height: 100vh
+}
+#main-container {
+    border: solid 2px;
+    min-width: 580px;
+    min-height: 580px;
+    display: grid;
+}
+
+.etch-pixel {
+    background-color: rgb(52, 86, 97);
+    border: solid grey;
+}
