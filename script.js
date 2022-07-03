@@ -1,7 +1,10 @@
 
 mainContainer = document.querySelector("#main-container");
+opacityButton = document.querySelector("#opacity-button");
 createGrid(16);
 let isOpacity = false;
+
+opacityButton.addEventListener('click', changeOpacity)
 
 function createGrid(amount){
     mainContainer.style.gridTemplateColumns = "repeat(" + amount + ", 1fr)";
@@ -28,4 +31,16 @@ function drawSquare(e){
     }
     square.style.backgroundColor = "black";
 
+}
+
+function changeOpacity(e){
+    if(isOpacity) {
+        isOpacity = false;
+        e.target.textContent = "Opacity OFF";
+        console.log(e);
+    } else {
+        isOpacity = true;
+        e.target.textContent = "Opacity ON";
+        console.log(e);
+    }
 }
