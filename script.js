@@ -1,6 +1,7 @@
 
 mainContainer = document.querySelector("#main-container");
 createGrid(16);
+let isOpacity = false;
 
 function createGrid(amount){
     mainContainer.style.gridTemplateColumns = "repeat(" + amount + ", 1fr)";
@@ -13,5 +14,18 @@ function createGrid(amount){
 }
 
 function drawSquare(e){
-    console.log(e.target);
+    let square = e.target;
+    let opacity = square.style.opacity;
+    if(isOpacity){
+        //This first statement checks if opacity is not defined yet
+        if(opacity === ""){
+            opacity = 0.1
+            square.style.opacity = opacity;
+        } else if(opacity < 1){
+            opacity = parseFloat(opacity) + 0.1;
+            square.style.opacity = opacity;
+        }
+    }
+    square.style.backgroundColor = "black";
+
 }
