@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: solid 2px;
@@ -15,4 +16,12 @@ body {
 .etch-pixel {
     border: solid 1px grey;
     opacity: 1.0;
+}
+
+#buttons {
+    display: flex;
+    min-width: 580px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
