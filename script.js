@@ -28,6 +28,8 @@ function drawSquare(e){
             opacity = parseFloat(opacity) + 0.1;
             square.style.opacity = opacity;
         }
+    } else {
+        square.style.opacity = 1.0;
     }
     square.style.backgroundColor = "black";
 
