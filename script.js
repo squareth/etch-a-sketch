@@ -1,6 +1,8 @@
 
 mainContainer = document.querySelector("#main-container");
 opacityButton = document.querySelector("#opacity-button");
+resetButton = document.querySelector("#reset-button");
+
 createGrid(16);
 let isOpacity = false;
 
@@ -44,5 +46,11 @@ function changeOpacity(e){
         isOpacity = true;
         e.target.textContent = "Opacity ON";
         console.log(e);
+    }
+}
+
+function deleteGrid(){
+    while (mainContainer.firstChild)  {
+        mainContainer.removeChild(mainContainer.lastChild);
     }
 }
