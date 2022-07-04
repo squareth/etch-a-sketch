@@ -2,7 +2,8 @@
 mainContainer = document.querySelector("#main-container");
 opacityButton = document.querySelector("#opacity-button");
 resetButton = document.querySelector("#reset-button");
-rainbowButton = document.querySelector('#rainbow-button')
+rainbowButton = document.querySelector('#rainbow-button');
+rangeInput = document.querySelector('#range');
 
 createGrid(16);
 let isOpacity = false;
@@ -11,6 +12,7 @@ let isRainbow = false;
 opacityButton.addEventListener('click', changeOpacity);
 resetButton.addEventListener('click', () => {deleteGrid(); createGrid(16);})
 rainbowButton.addEventListener('click', changeRainbow);
+rangeInput.addEventListener('input', () => {deleteGrid(); createGrid(rangeInput.value)});
 
 function createGrid(amount){
     mainContainer.style.gridTemplateColumns = "repeat(" + amount + ", 1fr)";
