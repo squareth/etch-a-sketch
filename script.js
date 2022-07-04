@@ -6,7 +6,8 @@ resetButton = document.querySelector("#reset-button");
 createGrid(16);
 let isOpacity = false;
 
-opacityButton.addEventListener('click', changeOpacity)
+opacityButton.addEventListener('click', changeOpacity);
+resetButton.addEventListener('click', () => {deleteGrid(); createGrid(16);})
 
 function createGrid(amount){
     mainContainer.style.gridTemplateColumns = "repeat(" + amount + ", 1fr)";
