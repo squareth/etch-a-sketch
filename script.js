@@ -5,6 +5,7 @@ resetButton = document.querySelector("#reset-button");
 
 createGrid(16);
 let isOpacity = false;
+let isRainbow = false;
 
 opacityButton.addEventListener('click', changeOpacity);
 resetButton.addEventListener('click', () => {deleteGrid(); createGrid(16);})
@@ -34,7 +35,13 @@ function drawSquare(e){
     } else {
         square.style.opacity = 1.0;
     }
-    square.style.backgroundColor = "black";
+    if(isRainbow){
+        const randomColor =
+            Math.floor(Math.random()*16777215).toString(16);
+            square.style.backgroundColor = '#' + randomColor;
+    } else {
+        square.style.backgroundColor = "black";
+    }
 
 }
 
@@ -55,3 +62,4 @@ function deleteGrid(){
         mainContainer.removeChild(mainContainer.lastChild);
     }
 }
+
