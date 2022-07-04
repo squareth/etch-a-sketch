@@ -53,11 +53,9 @@ function changeOpacity(e){
     if(isOpacity) {
         isOpacity = false;
         e.target.textContent = "Opacity OFF";
-        console.log(e);
     } else {
         isOpacity = true;
         e.target.textContent = "Opacity ON";
-        console.log(e);
     }
 }
 
